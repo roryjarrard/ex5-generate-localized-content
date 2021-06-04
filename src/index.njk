@@ -11,12 +11,12 @@ layout: base.njk
   </div>
 
   <ul style="list-style: none;">
-    {% for article in news.articles %}
+    {% for article in news[0].articles %}
     <li>
       <h2>
-        <a href="{{article.url}}">{{ article.title }}</a>
+        <a href="{{ article.url }}">{{ article.title }}</a>
       </h2>
-      <span>{{article.source.name}} - <time>{{ article.publishedAt}}</time></span>
+      <span>{{ article.source.name }} - <time>{{ article.publishedAt }}</time></span>
     </li>
     {% endfor %}
   </ul>

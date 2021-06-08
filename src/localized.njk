@@ -1,5 +1,6 @@
+
 ---
-title: Daily Briefing
+title: Daily Breifing
 layout: base.njk
 pagination:
   data: news
@@ -9,21 +10,20 @@ permalink: /{{ news.country }}/index.html
 ---
 
 <div class="container">
-  <h1>This is a page for you!!</h1>
+  <h1>This is a page for you</h1>
   <div class="vibe">You are great!</div>
   <div class="love">
-    ♥️
+    ❤️
   </div>
 
-  <ul style="list-style: none;">
-    {% for article in news.articles %}
+  <ul>
+  {% for article in news.articles %}
     <li>
-      <h2>
-        <a href="{{ article.url }}">{{ article.title }}</a>
-      </h2>
+      <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
       <span>{{ article.source.name }} - <time>{{ article.publishedAt }}</time></span>
     </li>
-    {% endfor %}
+
+  {% endfor %}
   </ul>
 </div>
-<script src="js/vibe.js"></script>
+<script src="/js/vibe.js"></script>
